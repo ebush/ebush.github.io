@@ -117,7 +117,15 @@ $(document).ready(function(){
 <script>
 function alertImport(){
 	alert("IMPORT DATES FROM CALENDAR");
-	$('#calendar').fullCalendar('addEventSource', [
+	var monthSource = new Object();
+	    monthSource.title = 'MONTH'; // this should be string
+	    monthSource.start = new Date("2015", "04", "8"); // this should be date object
+	    monthSource.end = new Date("2015", "04", "9");
+	
+	    var month = new Array();
+	    month[0] = monthSource;
+	    /*
+	    [
 		{
 		title : 'event1',
 		start : '2010-01-01'
@@ -132,7 +140,8 @@ function alertImport(){
 		start : '2010-01-09T12:30:00',
 		allDay : false // will make the time show
 		}
-		]);
+		]);*/
+	$('#calendar').fullCalendar('addEventSource', month);
 }
 
 function removeDate(element){
