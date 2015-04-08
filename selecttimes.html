@@ -217,8 +217,8 @@ function GetURLParameters()
             // other view-specific options here
         }
       },           eventClick: function(calEvent, jsEvent, view) {
-
-	       $('#calendar').fullCalendar( 'removeEvents', calEvent );
+		console.log("eventClick");
+	       $('#calendar').fullCalendar( 'removeEvents', calEvent.id );
 
     },
 			events: function(start, end, timezone, callback){
