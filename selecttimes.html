@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,38 +25,38 @@
       <a class="navbar-brand" href="#">Junction</a>
     </div>
 </nav>
-	
+
 	<div class = "row">
 		<div class = "col-xs-2"></div>
 		<div class ="col-xs-8">
 			<div class="checkout-wrap">
 		  <ul class="checkout-bar">
-		
+
 		    <li class="first visited">
 		      <a href="#">Event Details</a>
 		    </li>
-		
+
 		    <li class="previously visited">Vote on Location</li>
-		
+
 		    <li class="active">Add Availability</li>
-		
+
 		    <li class="next">Invite Participants</li>
-		
+
 		    <li class="">View Best Time!</li>
-		
+
 		  </ul>
 		  </div>
 		</div>
 		<div class = "col-xs-2"></div>
 	</div>
-	
+
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
-	
-	  	
+
+
 	<h1 class="text-center">What times are you available?</h1>
 	<div class="row">&nbsp;</div>
 
@@ -74,23 +75,23 @@
 
 
 
-	
+
 
   <div class="row">&nbsp;</div>
 	<div class="row">&nbsp;</div>
 
- 
+
 	<div class ="row">
   <div class="col-xs-6"><p class="text-center"><a class="btn btn-primary btn-lg" href="availability.html" role="button">Back</a></p></div>
-  
+
   <div class="col-xs-6"><p class="text-center"><a class="btn btn-primary btn-lg" href="invitepeople.html" role="button">Next</a></p></div>
 	</div>
-	
+
 </body>
 <script>
 $(document).ready(function(){
 	var i = 1;
-	
+
 	$(document).keypress(function(e) {
 
     if(e.which == 13 && $("#Location0").val()!= "") {
@@ -116,54 +117,73 @@ $(document).ready(function(){
 
 <script>
 function alertImport(){
-	alert("IMPORT DATES FROM CALENDAR");
-	 var date = new Date("April 8, 2015 9:00:00");
-	 var dateEnd = new Date("April 8, 2015 10:00:00");
-	    var d = date.getDate();
-	    var m = date.getMonth();
-	    var y = date.getFullYear();
-	    var t = date.getTime();
-	    var tend = dateEnd.getTime();
-	var monthSource = new Object();
+	alert("LOGIN TO CALENDAR");
+
+	    var monthSource = new Object();
 	    monthSource.title = 'BUSY'; // this should be string
-	    monthSource.start = new Date(y, m, d); // this should be date object
-	    monthSource.end = new Date(y, m, d );
+	    monthSource.start = '2015-04-05T09:00:00';
+	    monthSource.end = '2015-04-05T10:00:00';
 	    monthSource.editable = false;
 	    monthSource.color = "#C4C4C4";
-	
+
 	    var month = new Array();
 	    month[0] = monthSource;
-	    
-	    date = new Date("April 9, 2015 9:00:00");
-	    d = date.getDate();
-	    m = date.getMonth();
-	    y = date.getFullYear();
-	    t = date.getTime();
+
 	    monthSource = new Object();
 	    monthSource.title = 'BUSY'; // this should be string
-	    monthSource.start = new Date(y, m, d); // this should be date object
-	    monthSource.end = new Date(y, m, d );
+	    monthSource.start = '2015-04-06T16:00:00';
+	    monthSource.end = '2015-04-06T17:00:00';
 	    monthSource.editable = false;
 	    monthSource.color = "#C4C4C4";
 
 	    month[1] = monthSource;
-	    
-	    date = new Date("April 10, 2015 9:00:00");
-	    d = date.getDate();
-	    m = date.getMonth();
-	    y = date.getFullYear();
-	    t = date.getTime();
+
 	    monthSource = new Object();
 	    monthSource.title = 'BUSY'; // this should be string
-	    monthSource.start = new Date(y, m, d); // this should be date object
-	    monthSource.end = new Date(y, m, d );
+	    monthSource.start = '2015-04-07T11:00:00';
+	    monthSource.end = '2015-04-07T12:00:00';
 	    monthSource.editable = false;
 	    monthSource.color = "#C4C4C4";
-	
+
 	    month[2] = monthSource;
-	    
-	    
-	$('#calendar').fullCalendar('addEventSource', month);
+
+	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = '2015-04-08T811:00:00';
+	    monthSource.end = '2015-04-08T12:00:00';
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+
+	    month[3] = monthSource;
+
+	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = '2015-04-08T13:00:00';
+	    monthSource.end = '2015-04-08T14:00:00';
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+
+	    month[4] = monthSource;
+
+  	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = '2015-04-10T12:00:00';
+	    monthSource.end = '2015-04-10T13:00:00';
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+
+	    month[5] = monthSource;
+
+	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = '2015-04-11T12:00:00';
+	    monthSource.end = '2015-04-11T13:00:00';
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+
+	    month[6] = monthSource;
+
+  	$('#calendar').fullCalendar('addEventSource', month);
 }
 
 function removeDate(element){
@@ -171,19 +191,19 @@ function removeDate(element){
 	var elemid = $(element).attr("name");
 	$("#"+elemid).remove();
 	var startdate = moment (elemid);
-	
+
 	$('#calendar').fullCalendar( 'removeEvents', function(event) {
 		console.log(event.start.format("YYYY-MM-DD") +" =? "+startdate.format("YYYY-MM-DD"));
     if(event.start.format("YYYY-MM-DD")===startdate.format("YYYY-MM-DD")){
-    		
+
         return true;
     }
-  });	
+  });
 }
 
 function cannotattend(){
 	$('#calendar').fullCalendar('removeEvents');
-	
+
 	$("#datelist").empty();
 	$("#datelist").append("<li class=\"list-group-item\" id='cannotattend'>Unavailable For Any Day</li>");
 
@@ -204,7 +224,7 @@ function GetURLParameters()
 }
 
 	$(document).ready(function() {
-		
+
 		$('#calendar').fullCalendar({
 			header: {
 				left: 'prev,next today',
@@ -218,7 +238,8 @@ function GetURLParameters()
         }
       },           eventClick: function(calEvent, jsEvent, view) {
 		console.log("eventClick");
-	       $('#calendar').fullCalendar( 'removeEvents', calEvent.id );
+		console.log(calEvent._id);
+	       $('#calendar').fullCalendar( 'removeEvents', calEvent._id );
 
     },
 			events: function(start, end, timezone, callback){
@@ -231,18 +252,18 @@ function GetURLParameters()
              start: entry[1]+"T00:01:00",
              end: entry[1]+"T11:59:59"
            });
-           
+
            if($("#"+entry[1]).length){
-	           
+
            }else{
-	           //$("#datelist").append("<li class=\"list-group-item\" id='"+entry[1]+"'>"+entry[1]+" - All Day"+"<a href='#' onclick='removeDate(this)' name='"+entry[1]+"'> <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></li>");   
+	           //$("#datelist").append("<li class=\"list-group-item\" id='"+entry[1]+"'>"+entry[1]+" - All Day"+"<a href='#' onclick='removeDate(this)' name='"+entry[1]+"'> <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></li>");
            }
 
-						
+
          });
-         
+
          //console.log(events);
-         
+
          callback(events);
 			},
 			defaultView: 'agendaWeek',
@@ -254,8 +275,8 @@ function GetURLParameters()
 				//console.log($('#calendar').fullCalendar('clientEvents'));
 				var eventData;
 				if (title) {
-					
-					
+
+
 					while (start.isBefore(end)){
 						var stringDate = start.format("MM-DD-YYYY");
 						eventData = {
@@ -263,15 +284,15 @@ function GetURLParameters()
 							start: start,
 							end: start
 						};
-						
+
 						$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-						
+
 						//$("#datelist").append("<li class=\"list-group-item\" id='"+start.format("YYYY-MM-DDhh:mm:ss")+"'>"+start.format("MMMM D, YYYY h:mm:ss a")+"<a href='#' onclick='removeDate(this)' name='"+start.format("YYYY-MM-DDhh:mm:ss")+"'> <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></li>");
 						start.add(1, 'days');
-						
+
 						$("#cannotattend").remove();
 					}
-					
+
 					console.log(start);
 				}
 				$('#calendar').fullCalendar('unselect');
@@ -279,16 +300,16 @@ function GetURLParameters()
 			editable: true,
 			eventResize: function(event, delta, revertFunc) {
 				console.log(event);
-				
+
 			}
-      
+
 		});
-		
+
 		GetURLParameters();
-	
-		
+
+
 	});
-	
+
 
 
 
@@ -307,7 +328,7 @@ function GetURLParameters()
 		max-width: 900px;
 		margin: 0 auto;
 	}
-	
+
 
 </style>
 
