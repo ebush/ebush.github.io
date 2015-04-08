@@ -118,35 +118,23 @@ $(document).ready(function(){
 function alertImport(){
 	alert("IMPORT DATES FROM CALENDAR");
 	 var date = new Date("April 8, 2015 10:00:00");
+	 var dateEnd = new Date("April 8, 2015 12:00:00");
 	    var d = date.getDate();
 	    var m = date.getMonth();
 	    var y = date.getFullYear();
+	    var t = date.getTime();
+	    var tend = dateEnd.getTime();
 	var monthSource = new Object();
 	    monthSource.title = 'BUSY'; // this should be string
-	    monthSource.start = new Date(y, m, d); // this should be date object
-	    monthSource.end = new Date(y, m, d);
+	    monthSource.start = new Date(y, m, d, t); // this should be date object
+	    monthSource.end = new Date(y, m, d, tend );
 	    monthSource.editable = false;
 	    monthSource.color = "#C4C4C4";
 	
 	    var month = new Array();
 	    month[0] = monthSource;
-	    /*
-	    [
-		{
-		title : 'event1',
-		start : '2010-01-01'
-		},
-		{
-		title : 'event2',
-		start : '2010-01-05',
-		end : '2010-01-07'
-		},
-		{
-		title : 'event3',
-		start : '2010-01-09T12:30:00',
-		allDay : false // will make the time show
-		}
-		]);*/
+	    
+	    
 	$('#calendar').fullCalendar('addEventSource', month);
 }
 
