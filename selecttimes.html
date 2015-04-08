@@ -232,7 +232,12 @@ function GetURLParameters()
 	           
            }else{
 	           //$("#datelist").append("<li class=\"list-group-item\" id='"+entry[1]+"'>"+entry[1]+" - All Day"+"<a href='#' onclick='removeDate(this)' name='"+entry[1]+"'> <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></li>");   
-           }
+           },
+           eventClick: function(calEvent, jsEvent, view) {
+
+	       $('#calendar').fullCalendar( 'removeEvents', calEvent );
+
+    }
 						
          });
          
