@@ -126,13 +126,43 @@ function alertImport(){
 	    var tend = dateEnd.getTime();
 	var monthSource = new Object();
 	    monthSource.title = 'BUSY'; // this should be string
-	    monthSource.start = new Date(y, m, d, t); // this should be date object
-	    monthSource.end = new Date(y, m, d, tend );
+	    monthSource.start = new Date(y, m, d); // this should be date object
+	    monthSource.end = new Date(y, m, d );
 	    monthSource.editable = false;
 	    monthSource.color = "#C4C4C4";
 	
 	    var month = new Array();
 	    month[0] = monthSource;
+	    
+	    date = new Date("April 9, 2015 9:00:00");
+	    d = date.getDate();
+	    m = date.getMonth();
+	    y = date.getFullYear();
+	    t = date.getTime();
+	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = new Date(y, m, d); // this should be date object
+	    monthSource.end = new Date(y, m, d );
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+	
+	    var month = new Array();
+	    month[1] = monthSource;
+	    
+	    date = new Date("April 10, 2015 9:00:00");
+	    d = date.getDate();
+	    m = date.getMonth();
+	    y = date.getFullYear();
+	    t = date.getTime();
+	    monthSource = new Object();
+	    monthSource.title = 'BUSY'; // this should be string
+	    monthSource.start = new Date(y, m, d); // this should be date object
+	    monthSource.end = new Date(y, m, d );
+	    monthSource.editable = false;
+	    monthSource.color = "#C4C4C4";
+	
+	    var month = new Array();
+	    month[2] = monthSource;
 	    
 	    
 	$('#calendar').fullCalendar('addEventSource', month);
