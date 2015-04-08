@@ -216,7 +216,11 @@ function GetURLParameters()
             titleFormat:"MMMM DD"
             // other view-specific options here
         }
-      },
+      },           eventClick: function(calEvent, jsEvent, view) {
+
+	       $('#calendar').fullCalendar( 'removeEvents', calEvent );
+
+    },
 			events: function(start, end, timezone, callback){
 				 var dates = GetURLParameters();
 				 //console.log(dates);
@@ -232,12 +236,8 @@ function GetURLParameters()
 	           
            }else{
 	           //$("#datelist").append("<li class=\"list-group-item\" id='"+entry[1]+"'>"+entry[1]+" - All Day"+"<a href='#' onclick='removeDate(this)' name='"+entry[1]+"'> <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span></a></li>");   
-           },
-           eventClick: function(calEvent, jsEvent, view) {
+           }
 
-	       $('#calendar').fullCalendar( 'removeEvents', calEvent );
-
-    }
 						
          });
          
